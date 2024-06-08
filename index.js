@@ -35,11 +35,11 @@ app.get('/image/:username', async (req, res) => {
 
         // Draw username
         context.fillStyle = '#000000';
-        context.font = 'bold 30px Arial';
+        context.font = 'bold 30px Diverda Sans Com Regular';
         context.fillText(data.login, 150, 70);
 
         // Draw bio
-        context.font = '20px Arial';
+        context.font = '20px Diverda Sans Com Regular';
         context.fillText(data.bio || 'No bio available', 150, 100);
 
         // Draw avatar
