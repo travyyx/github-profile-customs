@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
     console.log("Service started.")
+    res.send("")
 });
 
 app.listen(port, () => {
@@ -26,16 +27,16 @@ app.get('/image/:username', async (req, res) => {
         const context = canvas.getContext('2d');
 
         // Draw background
-        context.fillStyle = '#ffffff';
+        context.fillStyle = '#e0635a';
         context.fillRect(0, 0, width, height);
 
         // Draw username
         context.fillStyle = '#000000';
-        context.font = 'bold 30px Arial';
+        context.font = 'bold 30px serif';
         context.fillText(data.login, 150, 70);
 
         // Draw bio
-        context.font = '20px Arial';
+        context.font = '20px serif';
         context.fillText(data.bio || 'No bio available', 150, 100);
 
         // Draw avatar

@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "serve": "node index.js"
+    "serve": "node index.js",
+    "compile": "node compiler.js"
   },
   "keywords": [],
   "author": "",
