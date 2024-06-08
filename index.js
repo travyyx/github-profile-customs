@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const { createCanvas, loadImage } = require('canvas');
+const { createCanvas, loadImage, registerFont } = require('canvas');
 const path = require('path');
 
 // Set the FONTCONFIG_PATH environment variable
