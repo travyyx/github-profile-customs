@@ -4,8 +4,7 @@ const { createCanvas, loadImage, registerFont } = require('canvas');
 const path = require('path');
 
 // Set the FONTCONFIG_PATH environment variable
-registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Regular.ttf'), { family: 'Roboto' });
-registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
+registerFont(path.join(__dirname, 'fonts/Diverda Sans Com Regular/Diverda Sans Com Regular.ttf'), { family: 'Diverda Sans Com Regular'});
 
 const app = express();
 const port = process.env.PORT || 3000;
