@@ -11,7 +11,7 @@ app.listen(port, () => {
 });
 
 app.get('/run-python', (req, res) => {
-    exec(`python main.py`, (error, stdout, stderr) => {
+    exec(`/usr/bin/python3 main.py`, (error, stdout, stderr) => {
         if (error) {
             console.error(`Error: ${error.message}`);
             return res.status(500).send(`Error: ${error.message}`);
