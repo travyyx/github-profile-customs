@@ -1,10 +1,12 @@
 const express = require('express');
 const axios = require('axios');
-const { createCanvas, loadImage } = require('canvas');
+const { createCanvas, loadImage, registerFont } = require('canvas');
 const path = require('path');
 
 // Set the FONTCONFIG_PATH environment variable
-process.env.FONTCONFIG_PATH = path.join(__dirname, 'fonts');
+registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Regular.ttf'), { family: 'Roboto' });
+registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
+
 const app = express();
 const port = process.env.PORT || 3000;
 
