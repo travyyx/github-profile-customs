@@ -5,6 +5,14 @@ const { createCanvas, loadImage } = require('canvas');
 const app = express();
 const port = process.env.PORT || 3000;
 
+app.get('/', (req, res) => {
+    res.send('Dynamic Image Generation Service');
+});
+
+app.listen(port, () => {
+    console.log(`Server running at http://localhost:${port}`);
+});
+
 app.get('/image/:username', async (req, res) => {
     const { username } = req.params;
 
