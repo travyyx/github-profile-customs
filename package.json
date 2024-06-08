@@ -1,0 +1,17 @@
+{
+  "name": "github-profile-customs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "serve": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "canvas": "^2.11.2",
+    "express": "^4.19.2"
+  }
+}
