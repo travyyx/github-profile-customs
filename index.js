@@ -1,7 +1,10 @@
 const express = require('express');
 const axios = require('axios');
 const { createCanvas, loadImage } = require('canvas');
+const path = require('path');
 
+// Set the FONTCONFIG_PATH environment variable
+process.env.FONTCONFIG_PATH = path.join(__dirname, 'fonts');
 const app = express();
 const port = process.env.PORT || 3000;
 
