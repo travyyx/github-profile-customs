@@ -1,11 +1,11 @@
 const express = require('express');
 const axios = require('axios');
-const { createCanvas, loadImage, registerFont } = require('canvas');
+const { createCanvas, loadImage } = require('canvas');
 const path = require('path');
 
 // Set the FONTCONFIG_PATH environment variable
-registerFont(path.join(__dirname, 'fonts/Diverda Sans Com Regular/Diverda Sans Com Regular.ttf'), { family: 'Diverda Sans Com Regular'});
-
+registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Regular.ttf'), { family: 'Roboto' });
+registerFont(path.join(__dirname, 'fonts/Roboto/Roboto-Bold.ttf'), { family: 'Roboto', weight: 'bold' });
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -35,11 +35,11 @@ app.get('/image/:username', async (req, res) => {
 
         // Draw username
         context.fillStyle = '#000000';
-        context.font = 'bold 30px "Diverda Sans Com Regular"';
+        context.font = 'bold 30px Arial';
         context.fillText(data.login, 150, 70);
 
         // Draw bio
-        context.font = '20px "Diverda Sans Com Regular"';
+        context.font = '20px Arial';
         context.fillText(data.bio || 'No bio available', 150, 100);
 
         // Draw avatar
